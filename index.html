@@ -235,17 +235,21 @@
             display: grid;
             grid-template-columns: 1fr;
             min-height: 520px;
+            align-items: stretch;
         }
 
         @media (min-width: 900px) {
             .skills-grid {
-                grid-template-columns: 0.37fr 0.63fr;
+                grid-template-columns: minmax(340px, 0.48fr) minmax(0, 0.52fr);
             }
         }
 
         .skills-core {
-            padding: 18px;
+            padding: 22px;
             border-bottom: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         @media (min-width: 900px) {
@@ -353,7 +357,10 @@
         }
 
         .skills-tools {
-            padding: 18px;
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .skills-tools-top {
@@ -376,7 +383,7 @@
         }
 
         .skills-legend {
-            margin-top: 12px;
+            margin-top: 4px;
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
@@ -751,14 +758,12 @@
                 $ whoami<span class="cursor"></span>
             </div>
             <h1>Varsha D</h1>
-            <p class="tagline">Backend Developer | Security Analyst | Technical Writer </p>
+            <p class="tagline">CyberSecurity Analyst | Software Engineer </p>
             <p style="color: var(--text-secondary); line-height: 1.6;">
                 New Jersey, NJ · varsha13sfd@gmail.com
             </p>
             <p style="color: var(--text-muted); line-height: 1.6;">
-                Security-focused backend developer with experience translating complex systems into clear
-                documentation and delivering reliable, scalable services. I build and operate APIs and
-                data systems with a focus on performance, security, and operational clarity.
+               Application security-focused engineer bridging vulnerability triage, threat modeling, and secure service development, with hands-on experience securing APIs and cloud workloads.
             </p>
         </header>
 
@@ -777,39 +782,44 @@
                         <div class="skills-hint"><span class="skills-dot"></span>Hover/tap to spotlight tools</div>
 
                         <div class="skills-core-list" id="coreList">
-                            <button class="skills-core-btn" type="button" data-group="auth" aria-pressed="false">
-                                <div class="skills-core-title">AuthN / AuthZ &amp; Access Control <span>→</span></div>
-                                <div class="skills-core-sub">OAuth2/JWT/API keys, RBAC + scopes, subscription enforcement</div>
-                            </button>
-
-                            <button class="skills-core-btn" type="button" data-group="gateway" aria-pressed="false">
-                                <div class="skills-core-title">API Gateway &amp; Request Lifecycle <span>→</span></div>
-                                <div class="skills-core-sub">Validation, routing, rate limiting, auditing, safe errors</div>
+                            <button class="skills-core-btn" type="button" data-group="languages" aria-pressed="false">
+                                <div class="skills-core-title">Languages &amp; Frameworks <span>→</span></div>
+                                <div class="skills-core-sub">Python, Java, TypeScript, FastAPI, HTML/CSS</div>
                             </button>
 
                             <button class="skills-core-btn" type="button" data-group="backend" aria-pressed="false">
-                                <div class="skills-core-title">Backend Services &amp; Business Logic <span>→</span></div>
-                                <div class="skills-core-sub">REST APIs, async/concurrency, integrations, reviews</div>
+                                <div class="skills-core-title">Backend &amp; Security <span>→</span></div>
+                                <div class="skills-core-sub">JWT/API auth, RBAC, OAuth2 concepts, validation, secrets</div>
                             </button>
 
-                            <button class="skills-core-btn" type="button" data-group="data" aria-pressed="false">
-                                <div class="skills-core-title">Data Systems &amp; Performance <span>→</span></div>
-                                <div class="skills-core-sub">Schemas, indexing, query tuning, idempotent writes, caching</div>
-                            </button>
-
-                            <button class="skills-core-btn" type="button" data-group="obs" aria-pressed="false">
-                                <div class="skills-core-title">Observability &amp; Security Ops <span>→</span></div>
-                                <div class="skills-core-sub">Structured logging, audit trails, vuln analysis, compliance</div>
+                            <button class="skills-core-btn" type="button" data-group="security" aria-pressed="false">
+                                <div class="skills-core-title">Security Domains &amp; Tools <span>→</span></div>
+                                <div class="skills-core-sub">OWASP, NIST 800-53, FedRAMP, vuln &amp; threat analysis</div>
                             </button>
 
                             <button class="skills-core-btn" type="button" data-group="cloud" aria-pressed="false">
-                                <div class="skills-core-title">CI/CD, Cloud &amp; Deployment <span>→</span></div>
-                                <div class="skills-core-sub">Docker, pipelines, env config, secrets, infra basics</div>
+                                <div class="skills-core-title">Cloud &amp; DevOps <span>→</span></div>
+                                <div class="skills-core-sub">AWS/GCP, Docker, Kubernetes, CI/CD, Terraform</div>
+                            </button>
+
+                            <button class="skills-core-btn" type="button" data-group="data" aria-pressed="false">
+                                <div class="skills-core-title">Data &amp; Databases <span>→</span></div>
+                                <div class="skills-core-sub">PostgreSQL, MySQL, Redis, schema design, query tuning</div>
+                            </button>
+
+                            <button class="skills-core-btn" type="button" data-group="systems" aria-pressed="false">
+                                <div class="skills-core-title">Systems &amp; Networking <span>→</span></div>
+                                <div class="skills-core-sub">Linux, Nginx, TCP/IP, DNS, VPN</div>
+                            </button>
+
+                            <button class="skills-core-btn" type="button" data-group="monitoring" aria-pressed="false">
+                                <div class="skills-core-title">Monitoring &amp; Reliability <span>→</span></div>
+                                <div class="skills-core-sub">CloudWatch, Grafana, logs &amp; metrics, RCA &amp; triage</div>
                             </button>
 
                             <button class="skills-core-btn" type="button" data-group="ml" aria-pressed="false">
-                                <div class="skills-core-title">ML Systems <span>→</span></div>
-                                <div class="skills-core-sub">Pipelines, training vs inference, evaluation, reproducibility</div>
+                                <div class="skills-core-title">ML Stack <span>→</span></div>
+                                <div class="skills-core-sub">Pandas, NumPy, scikit-learn, TensorFlow, PyTorch</div>
                             </button>
                         </div>
                     </aside>
@@ -829,39 +839,111 @@
                         </div>
 
                         <div class="skills-orbs" id="orbs">
-                            <div class="skills-orb" data-groups="backend gateway auth" data-name="FastAPI">
-                                <div class="skills-orb-circle" aria-hidden="true">⚡</div>
-                                <div>
-                                    <div class="skills-orb-name">FastAPI</div>
-                                    <div class="skills-orb-mini">APIs • deps • middleware</div>
-                                </div>
-                            </div>
-
-                            <div class="skills-orb" data-groups="backend" data-name="Python">
+                            <div class="skills-orb" data-groups="languages backend" data-name="Python">
                                 <div class="skills-orb-circle" aria-hidden="true">🐍</div>
                                 <div>
                                     <div class="skills-orb-name">Python</div>
-                                    <div class="skills-orb-mini">services • scripting</div>
+                                    <div class="skills-orb-mini">services • automation</div>
                                 </div>
                             </div>
 
-                            <div class="skills-orb" data-groups="backend data" data-name="SQLAlchemy">
+                            <div class="skills-orb" data-groups="languages backend" data-name="Java">
+                                <div class="skills-orb-circle" aria-hidden="true">☕</div>
+                                <div>
+                                    <div class="skills-orb-name">Java</div>
+                                    <div class="skills-orb-mini">services • tooling</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="languages backend" data-name="TypeScript">
+                                <div class="skills-orb-circle" aria-hidden="true">🟦</div>
+                                <div>
+                                    <div class="skills-orb-name">TypeScript</div>
+                                    <div class="skills-orb-mini">apps • APIs</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="languages backend" data-name="FastAPI">
+                                <div class="skills-orb-circle" aria-hidden="true">⚡</div>
+                                <div>
+                                    <div class="skills-orb-name">FastAPI</div>
+                                    <div class="skills-orb-mini">routes • validation</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="languages" data-name="PHP">
+                                <div class="skills-orb-circle" aria-hidden="true">🐘</div>
+                                <div>
+                                    <div class="skills-orb-name">PHP (familiar)</div>
+                                    <div class="skills-orb-mini">server-side basics</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="languages" data-name="React/Next.js">
+                                <div class="skills-orb-circle" aria-hidden="true">⚛️</div>
+                                <div>
+                                    <div class="skills-orb-name">React/Next.js (familiar)</div>
+                                    <div class="skills-orb-mini">UI • routing</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="languages" data-name="HTML/CSS">
                                 <div class="skills-orb-circle" aria-hidden="true">🧩</div>
                                 <div>
-                                    <div class="skills-orb-name">SQLAlchemy</div>
-                                    <div class="skills-orb-mini">ORM • transactions</div>
+                                    <div class="skills-orb-name">HTML/CSS</div>
+                                    <div class="skills-orb-mini">layout • styling</div>
                                 </div>
                             </div>
 
-                            <div class="skills-orb" data-groups="backend" data-name="Pydantic">
-                                <div class="skills-orb-circle" aria-hidden="true">🧠</div>
+                            <div class="skills-orb" data-groups="languages backend" data-name="OOP">
+                                <div class="skills-orb-circle" aria-hidden="true">🧱</div>
                                 <div>
-                                    <div class="skills-orb-name">Pydantic</div>
-                                    <div class="skills-orb-mini">validation • schemas</div>
+                                    <div class="skills-orb-name">OOP</div>
+                                    <div class="skills-orb-mini">design • patterns</div>
                                 </div>
                             </div>
 
-                            <div class="skills-orb" data-groups="backend gateway" data-name="REST APIs">
+                            <div class="skills-orb" data-groups="backend security" data-name="JWT/API auth">
+                                <div class="skills-orb-circle" aria-hidden="true">🪙</div>
+                                <div>
+                                    <div class="skills-orb-name">JWT/API auth</div>
+                                    <div class="skills-orb-mini">tokens • claims</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="backend security" data-name="RBAC">
+                                <div class="skills-orb-circle" aria-hidden="true">🧷</div>
+                                <div>
+                                    <div class="skills-orb-name">RBAC</div>
+                                    <div class="skills-orb-mini">roles • policies</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="backend security" data-name="OAuth2 concepts">
+                                <div class="skills-orb-circle" aria-hidden="true">🪪</div>
+                                <div>
+                                    <div class="skills-orb-name">OAuth2 concepts</div>
+                                    <div class="skills-orb-mini">flows • scopes</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="backend security" data-name="Input validation">
+                                <div class="skills-orb-circle" aria-hidden="true">✅</div>
+                                <div>
+                                    <div class="skills-orb-name">Input validation</div>
+                                    <div class="skills-orb-mini">sanitization</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="backend security" data-name="Secrets handling">
+                                <div class="skills-orb-circle" aria-hidden="true">🔐</div>
+                                <div>
+                                    <div class="skills-orb-name">Secrets handling</div>
+                                    <div class="skills-orb-mini">rotation • storage</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="backend" data-name="REST APIs">
                                 <div class="skills-orb-circle" aria-hidden="true">🧭</div>
                                 <div>
                                     <div class="skills-orb-name">REST APIs</div>
@@ -869,103 +951,15 @@
                                 </div>
                             </div>
 
-                            <div class="skills-orb" data-groups="backend" data-name="Async IO">
-                                <div class="skills-orb-circle" aria-hidden="true">⏱️</div>
+                            <div class="skills-orb" data-groups="security" data-name="OWASP Top 10">
+                                <div class="skills-orb-circle" aria-hidden="true">🛡️</div>
                                 <div>
-                                    <div class="skills-orb-name">Async / Concurrency</div>
-                                    <div class="skills-orb-mini">throughput • latency</div>
+                                    <div class="skills-orb-name">OWASP Top 10</div>
+                                    <div class="skills-orb-mini">app risks</div>
                                 </div>
                             </div>
 
-                            <div class="skills-orb" data-groups="auth gateway" data-name="OAuth2">
-                                <div class="skills-orb-circle" aria-hidden="true">🪪</div>
-                                <div>
-                                    <div class="skills-orb-name">OAuth 2.0</div>
-                                    <div class="skills-orb-mini">client credentials</div>
-                                </div>
-                            </div>
-
-                            <div class="skills-orb" data-groups="auth gateway" data-name="JWT">
-                                <div class="skills-orb-circle" aria-hidden="true">🪙</div>
-                                <div>
-                                    <div class="skills-orb-name">JWT</div>
-                                    <div class="skills-orb-mini">tokens • claims</div>
-                                </div>
-                            </div>
-
-                            <div class="skills-orb" data-groups="auth gateway" data-name="API Keys">
-                                <div class="skills-orb-circle" aria-hidden="true">🔑</div>
-                                <div>
-                                    <div class="skills-orb-name">API Keys</div>
-                                    <div class="skills-orb-mini">prefix • hash • revoke</div>
-                                </div>
-                            </div>
-
-                            <div class="skills-orb" data-groups="auth backend" data-name="RBAC/Scopes">
-                                <div class="skills-orb-circle" aria-hidden="true">🧷</div>
-                                <div>
-                                    <div class="skills-orb-name">RBAC + Scopes</div>
-                                    <div class="skills-orb-mini">policy enforcement</div>
-                                </div>
-                            </div>
-
-                            <div class="skills-orb" data-groups="data backend ml" data-name="PostgreSQL">
-                                <div class="skills-orb-circle" aria-hidden="true">🐘</div>
-                                <div>
-                                    <div class="skills-orb-name">PostgreSQL</div>
-                                    <div class="skills-orb-mini">schemas • indexing</div>
-                                </div>
-                            </div>
-
-                            <div class="skills-orb" data-groups="data gateway obs" data-name="Redis">
-                                <div class="skills-orb-circle" aria-hidden="true">🧊</div>
-                                <div>
-                                    <div class="skills-orb-name">Redis</div>
-                                    <div class="skills-orb-mini">cache • rate limits</div>
-                                </div>
-                            </div>
-
-                            <div class="skills-orb" data-groups="data" data-name="ERD Tools">
-                                <div class="skills-orb-circle" aria-hidden="true">🗺️</div>
-                                <div>
-                                    <div class="skills-orb-name">ERD Tools</div>
-                                    <div class="skills-orb-mini">modeling • docs</div>
-                                </div>
-                            </div>
-
-                            <div class="skills-orb" data-groups="data backend" data-name="Idempotency">
-                                <div class="skills-orb-circle" aria-hidden="true">♻️</div>
-                                <div>
-                                    <div class="skills-orb-name">Idempotent Writes</div>
-                                    <div class="skills-orb-mini">upsert • de-dup</div>
-                                </div>
-                            </div>
-
-                            <div class="skills-orb" data-groups="obs backend gateway" data-name="Structured Logging">
-                                <div class="skills-orb-circle" aria-hidden="true">🧾</div>
-                                <div>
-                                    <div class="skills-orb-name">Structured Logging</div>
-                                    <div class="skills-orb-mini">traceability</div>
-                                </div>
-                            </div>
-
-                            <div class="skills-orb" data-groups="obs auth gateway" data-name="Audit Logs">
-                                <div class="skills-orb-circle" aria-hidden="true">📜</div>
-                                <div>
-                                    <div class="skills-orb-name">Audit Logging</div>
-                                    <div class="skills-orb-mini">actions • access</div>
-                                </div>
-                            </div>
-
-                            <div class="skills-orb" data-groups="obs" data-name="Nessus/IRAT">
-                                <div class="skills-orb-circle" aria-hidden="true">🛰️</div>
-                                <div>
-                                    <div class="skills-orb-name">Nessus / IRAT</div>
-                                    <div class="skills-orb-mini">vuln analysis</div>
-                                </div>
-                            </div>
-
-                            <div class="skills-orb" data-groups="obs" data-name="NIST 800-53">
+                            <div class="skills-orb" data-groups="security" data-name="NIST 800-53">
                                 <div class="skills-orb-circle" aria-hidden="true">🧱</div>
                                 <div>
                                     <div class="skills-orb-name">NIST 800-53</div>
@@ -973,27 +967,75 @@
                                 </div>
                             </div>
 
-                            <div class="skills-orb" data-groups="cloud backend" data-name="Docker">
-                                <div class="skills-orb-circle" aria-hidden="true">🐳</div>
+                            <div class="skills-orb" data-groups="security" data-name="FedRAMP">
+                                <div class="skills-orb-circle" aria-hidden="true">🧾</div>
                                 <div>
-                                    <div class="skills-orb-name">Docker</div>
-                                    <div class="skills-orb-mini">containers</div>
+                                    <div class="skills-orb-name">FedRAMP</div>
+                                    <div class="skills-orb-mini">baseline compliance</div>
                                 </div>
                             </div>
 
-                            <div class="skills-orb" data-groups="cloud" data-name="CI/CD">
-                                <div class="skills-orb-circle" aria-hidden="true">🔁</div>
+                            <div class="skills-orb" data-groups="security" data-name="Vulnerability analysis">
+                                <div class="skills-orb-circle" aria-hidden="true">🛰️</div>
                                 <div>
-                                    <div class="skills-orb-name">CI/CD</div>
-                                    <div class="skills-orb-mini">pipelines</div>
+                                    <div class="skills-orb-name">Vulnerability analysis</div>
+                                    <div class="skills-orb-mini">risk • severity</div>
                                 </div>
                             </div>
 
-                            <div class="skills-orb" data-groups="cloud" data-name="GitHub">
-                                <div class="skills-orb-circle" aria-hidden="true">🐙</div>
+                            <div class="skills-orb" data-groups="security" data-name="Threat modeling">
+                                <div class="skills-orb-circle" aria-hidden="true">🧠</div>
                                 <div>
-                                    <div class="skills-orb-name">Git + GitHub</div>
-                                    <div class="skills-orb-mini">reviews • workflows</div>
+                                    <div class="skills-orb-name">Threat modeling</div>
+                                    <div class="skills-orb-mini">abuse cases</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="security monitoring" data-name="Splunk">
+                                <div class="skills-orb-circle" aria-hidden="true">🔍</div>
+                                <div>
+                                    <div class="skills-orb-name">Splunk</div>
+                                    <div class="skills-orb-mini">log search</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="security monitoring" data-name="MDE">
+                                <div class="skills-orb-circle" aria-hidden="true">🛡️</div>
+                                <div>
+                                    <div class="skills-orb-name">MDE</div>
+                                    <div class="skills-orb-mini">endpoint defense</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="security" data-name="Nessus">
+                                <div class="skills-orb-circle" aria-hidden="true">🛰️</div>
+                                <div>
+                                    <div class="skills-orb-name">Nessus</div>
+                                    <div class="skills-orb-mini">scan • findings</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="security" data-name="Nmap">
+                                <div class="skills-orb-circle" aria-hidden="true">📡</div>
+                                <div>
+                                    <div class="skills-orb-name">Nmap</div>
+                                    <div class="skills-orb-mini">ports • services</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="security" data-name="AppDetect">
+                                <div class="skills-orb-circle" aria-hidden="true">🧪</div>
+                                <div>
+                                    <div class="skills-orb-name">AppDetect</div>
+                                    <div class="skills-orb-mini">asset insights</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="security" data-name="Burp Suite">
+                                <div class="skills-orb-circle" aria-hidden="true">🕷️</div>
+                                <div>
+                                    <div class="skills-orb-name">Burp Suite (familiar)</div>
+                                    <div class="skills-orb-mini">web testing</div>
                                 </div>
                             </div>
 
@@ -1001,7 +1043,7 @@
                                 <div class="skills-orb-circle" aria-hidden="true">☁️</div>
                                 <div>
                                     <div class="skills-orb-name">AWS</div>
-                                    <div class="skills-orb-mini">compute • storage</div>
+                                    <div class="skills-orb-mini">EC2 • ECS • Lambda • S3</div>
                                 </div>
                             </div>
 
@@ -1009,31 +1051,207 @@
                                 <div class="skills-orb-circle" aria-hidden="true">🌤️</div>
                                 <div>
                                     <div class="skills-orb-name">GCP</div>
-                                    <div class="skills-orb-mini">compute • storage</div>
+                                    <div class="skills-orb-mini">GKE • Cloud Run • GCS</div>
                                 </div>
                             </div>
 
-                            <div class="skills-orb" data-groups="ml data" data-name="Pandas/Numpy">
+                            <div class="skills-orb" data-groups="cloud" data-name="Docker">
+                                <div class="skills-orb-circle" aria-hidden="true">🐳</div>
+                                <div>
+                                    <div class="skills-orb-name">Docker</div>
+                                    <div class="skills-orb-mini">containers</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="cloud" data-name="Kubernetes">
+                                <div class="skills-orb-circle" aria-hidden="true">☸️</div>
+                                <div>
+                                    <div class="skills-orb-name">Kubernetes</div>
+                                    <div class="skills-orb-mini">orchestration</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="cloud" data-name="Jenkins">
+                                <div class="skills-orb-circle" aria-hidden="true">🧰</div>
+                                <div>
+                                    <div class="skills-orb-name">Jenkins</div>
+                                    <div class="skills-orb-mini">pipelines • builds</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="cloud" data-name="GitHub Actions">
+                                <div class="skills-orb-circle" aria-hidden="true">⚙️</div>
+                                <div>
+                                    <div class="skills-orb-name">GitHub Actions</div>
+                                    <div class="skills-orb-mini">workflows</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="cloud" data-name="CI/CD">
+                                <div class="skills-orb-circle" aria-hidden="true">🔁</div>
+                                <div>
+                                    <div class="skills-orb-name">CI/CD</div>
+                                    <div class="skills-orb-mini">automation</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="cloud" data-name="Terraform">
+                                <div class="skills-orb-circle" aria-hidden="true">🏗️</div>
+                                <div>
+                                    <div class="skills-orb-name">Terraform (basic)</div>
+                                    <div class="skills-orb-mini">infrastructure as code</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="data" data-name="PostgreSQL">
+                                <div class="skills-orb-circle" aria-hidden="true">🐘</div>
+                                <div>
+                                    <div class="skills-orb-name">PostgreSQL</div>
+                                    <div class="skills-orb-mini">schemas • indexing</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="data" data-name="MySQL">
+                                <div class="skills-orb-circle" aria-hidden="true">🗃️</div>
+                                <div>
+                                    <div class="skills-orb-name">MySQL</div>
+                                    <div class="skills-orb-mini">relational storage</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="data" data-name="Redis">
+                                <div class="skills-orb-circle" aria-hidden="true">🧊</div>
+                                <div>
+                                    <div class="skills-orb-name">Redis</div>
+                                    <div class="skills-orb-mini">cache • queues</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="data" data-name="Schema design">
+                                <div class="skills-orb-circle" aria-hidden="true">🧬</div>
+                                <div>
+                                    <div class="skills-orb-name">Schema design</div>
+                                    <div class="skills-orb-mini">constraints • ERDs</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="data" data-name="Query optimization">
+                                <div class="skills-orb-circle" aria-hidden="true">⚙️</div>
+                                <div>
+                                    <div class="skills-orb-name">Query optimization</div>
+                                    <div class="skills-orb-mini">plans • indexes</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="systems" data-name="Linux">
+                                <div class="skills-orb-circle" aria-hidden="true">🐧</div>
+                                <div>
+                                    <div class="skills-orb-name">Linux</div>
+                                    <div class="skills-orb-mini">servers • ops</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="systems" data-name="Nginx">
+                                <div class="skills-orb-circle" aria-hidden="true">🌐</div>
+                                <div>
+                                    <div class="skills-orb-name">Nginx</div>
+                                    <div class="skills-orb-mini">reverse proxy</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="systems" data-name="TCP/IP">
+                                <div class="skills-orb-circle" aria-hidden="true">📶</div>
+                                <div>
+                                    <div class="skills-orb-name">TCP/IP</div>
+                                    <div class="skills-orb-mini">networking basics</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="systems" data-name="DNS">
+                                <div class="skills-orb-circle" aria-hidden="true">🧭</div>
+                                <div>
+                                    <div class="skills-orb-name">DNS</div>
+                                    <div class="skills-orb-mini">routing • records</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="systems" data-name="VPN">
+                                <div class="skills-orb-circle" aria-hidden="true">🔒</div>
+                                <div>
+                                    <div class="skills-orb-name">VPN</div>
+                                    <div class="skills-orb-mini">secure tunnels</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="monitoring cloud" data-name="CloudWatch">
                                 <div class="skills-orb-circle" aria-hidden="true">📈</div>
                                 <div>
-                                    <div class="skills-orb-name">Pandas / NumPy</div>
-                                    <div class="skills-orb-mini">pipelines • validation</div>
+                                    <div class="skills-orb-name">CloudWatch</div>
+                                    <div class="skills-orb-mini">metrics • alerts</div>
                                 </div>
                             </div>
 
-                            <div class="skills-orb" data-groups="ml" data-name="Model Training">
-                                <div class="skills-orb-circle" aria-hidden="true">🧪</div>
+                            <div class="skills-orb" data-groups="monitoring" data-name="Grafana">
+                                <div class="skills-orb-circle" aria-hidden="true">📊</div>
                                 <div>
-                                    <div class="skills-orb-name">Model Training</div>
-                                    <div class="skills-orb-mini">reproducibility</div>
+                                    <div class="skills-orb-name">Grafana</div>
+                                    <div class="skills-orb-mini">dashboards</div>
                                 </div>
                             </div>
 
-                            <div class="skills-orb" data-groups="ml backend data" data-name="Inference">
-                                <div class="skills-orb-circle" aria-hidden="true">🧠</div>
+                            <div class="skills-orb" data-groups="monitoring" data-name="Logs & metrics">
+                                <div class="skills-orb-circle" aria-hidden="true">🧾</div>
                                 <div>
-                                    <div class="skills-orb-name">Inference Pipelines</div>
-                                    <div class="skills-orb-mini">batch • realtime</div>
+                                    <div class="skills-orb-name">Logs &amp; metrics</div>
+                                    <div class="skills-orb-mini">signals • alerts</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="monitoring" data-name="RCA & triage">
+                                <div class="skills-orb-circle" aria-hidden="true">🚑</div>
+                                <div>
+                                    <div class="skills-orb-name">RCA &amp; triage</div>
+                                    <div class="skills-orb-mini">issue response</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="ml" data-name="Pandas">
+                                <div class="skills-orb-circle" aria-hidden="true">📈</div>
+                                <div>
+                                    <div class="skills-orb-name">Pandas</div>
+                                    <div class="skills-orb-mini">dataframes</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="ml" data-name="NumPy">
+                                <div class="skills-orb-circle" aria-hidden="true">🔢</div>
+                                <div>
+                                    <div class="skills-orb-name">NumPy</div>
+                                    <div class="skills-orb-mini">arrays</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="ml" data-name="scikit-learn">
+                                <div class="skills-orb-circle" aria-hidden="true">🧮</div>
+                                <div>
+                                    <div class="skills-orb-name">scikit-learn</div>
+                                    <div class="skills-orb-mini">models • metrics</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="ml" data-name="TensorFlow">
+                                <div class="skills-orb-circle" aria-hidden="true">🟧</div>
+                                <div>
+                                    <div class="skills-orb-name">TensorFlow</div>
+                                    <div class="skills-orb-mini">training • serving</div>
+                                </div>
+                            </div>
+
+                            <div class="skills-orb" data-groups="ml" data-name="PyTorch">
+                                <div class="skills-orb-circle" aria-hidden="true">🟥</div>
+                                <div>
+                                    <div class="skills-orb-name">PyTorch</div>
+                                    <div class="skills-orb-mini">models • research</div>
                                 </div>
                             </div>
                         </div>
@@ -1052,9 +1270,9 @@
                         <div class="role">Security Analyst - Technical Writer</div>
                         <div class="duration">Oct 2024 - Present | New Jersey, NJ</div>
                         <ul>
-                            <li>Evaluated deployed systems against reliability, availability, and performance requirements, identifying risks and control gaps impacting mission-critical operations.</li>
-                            <li>Collaborated closely with engineers to translate complex backend systems into clear, accurate documentation.</li>
-                            <li>Analyzed vulnerabilities and misconfigurations to assess system-level risk across confidentiality, integrity, and availability, informing remediation priorities.</li>
+                            <li>Working in the Cybersecurity risk and compliance team — responsible for evaluating systems against NIST 800-53 and FedRAMP controls, identifying gaps in reliability, availability, and security requirements while developing practical knowledge of CIA risk scoring and compliance frameworks.</li>
+                            <li>Analyzed security logs, vulnerability reports, and incident data to identify patterns, anomalies, and recurring weaknesses across systems and applications.</li>
+                            <li>Collaborated with security and engineering stakeholders to evaluate risk scenarios using threat-modeling concepts and prepared clear risk summaries and compliance status reports, improving visibility into security posture and informing follow-up actions.</li>
                         </ul>
                         <div style="margin-top: 15px;">
                             <span class="tech-badge">Risk Analysis</span>
@@ -1069,12 +1287,11 @@
                     <div class="timeline-content">
                         <div class="company-name">SDH Systems</div>
                         <div class="role">Software Developer</div>
-                        <div class="duration">Nov 2022 - Sep 2024 | New York, NY</div>
+                        <div class="duration">Dec 2022 - Sep 2024 | New York, NY</div>
                         <ul>
-                            <li>Designed and built scalable backend services and REST APIs using Python/FastAPI with a focus on performance and maintainability.</li>
-                            <li>Implemented secure data access and business logic, optimizing PostgreSQL schemas and queries for production workloads.</li>
-                            <li>Deployed and operated services on cloud infrastructure (AWS/GCP) with Docker-based CI/CD pipelines.</li>
-                            <li>Performed root cause analysis (RCA) on production issues and developer-reported bugs, documenting findings, mitigations, and preventive actions to improve platform reliability and developer experience.</li>
+                            <li>Worked as a backend engineer designing and improving API and service logic, supporting PostgreSQL-backed data flows and cloud-deployed services (AWS/GCP), troubleshooting production issues (RCA), enhancing deploy/monitoring workflows, and partnering with frontend, data, and business teams—while mentoring junior developers through code reviews and knowledge sharing.</li>
+                            <li>Implemented secure data access layers and business logic, modeling and optimizing PostgreSQL schemas and queries to support analytics- and ML-driven workloads and reduce query latency under peak traffic.</li>
+                            <li>Built and operated containerized microservices on AWS (EC2, ECS, Lambda) and GCP (GKE, Cloud Run), leveraging cloud compute and object storage (S3/GCS) and integrating Docker, CI/CD pipelines (GitHub Actions/Azure DevOps/Jenkins), and autoscaling to ensure reliable deployments.</li>
                         </ul>
                         <div style="margin-top: 15px;">
                             <span class="tech-badge">Python</span>
@@ -1083,6 +1300,24 @@
                             <span class="tech-badge">Docker</span>
                             <span class="tech-badge">AWS</span>
                             <span class="tech-badge">GCP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="company-name">Telepath</div>
+                        <div class="role">AI/ML Intern</div>
+                        <div class="duration">Feb 2022 - Jul 2022 | New York, NY</div>
+                        <ul>
+                            <li>Defined and evaluated distributed system architecture options (microservices, event-driven, scalable pipelines) across AWS, translating engineering constraints into product trade-offs that shaped ~30% of roadmap priorities for search and retrieval features.</li>
+                            <li>Analyzed source code repositories and AI/ML workflow integration points through Git, CI/CD pipelines, and Python/Node code reviews, identifying architectural gaps that reduced feature exploration time and improved iteration speed across the team.</li>
+                        </ul>
+                        <div style="margin-top: 15px;">
+                            <span class="tech-badge">Architecture</span>
+                            <span class="tech-badge">AWS</span>
+                            <span class="tech-badge">Code Review</span>
                         </div>
                     </div>
                 </div>
@@ -1098,22 +1333,29 @@
                     <span class="code-keyword">class</span> <span class="code-function">APIAccessManager</span>:
                 </div>
                 <div class="code-line" style="padding-left: 20px;">
-                    <span class="code-comment"># Secure, multi-tenant API management platform</span>
+                    <span class="code-comment"># Centralized authZ/AuthN and request enforcement layer</span>
                 </div>
                 <div class="code-line" style="padding-left: 20px;">
-                    access_controls = [<span class="code-string">"RBAC"</span>, <span class="code-string">"scopes"</span>, <span class="code-string">"API keys"</span>]
+                    identity = [<span class="code-string">"JWT"</span>, <span class="code-string">"API keys"</span>, <span class="code-string">"OAuth2 client credentials"</span>]
                 </div>
                 <div class="code-line" style="padding-left: 20px;">
-                    audit_trails = <span class="code-string">"logging + monitoring + RCA support"</span>
+                    authorization = [<span class="code-string">"RBAC"</span>, <span class="code-string">"Scopes"</span>, <span class="code-string">"Tenant-bound permissions"</span>]
+                </div>
+                <div class="code-line" style="padding-left: 20px;">
+                    defenses = [<span class="code-string">"Per-endpoint authZ"</span>, <span class="code-string">"Key rotation/revocation"</span>, <span class="code-string">"Rate limiting"</span>, <span class="code-string">"Request validation"</span>]
+                </div>
+                <div class="code-line" style="padding-left: 20px;">
+                    governance = [<span class="code-string">"Audit trails"</span>, <span class="code-string">"Usage monitoring"</span>, <span class="code-string">"Access revocation workflow"</span>]
                 </div>
                 <div style="margin-top: 15px; padding-left: 20px;">
-                    <span class="tech-badge">JWT</span>
-                    <span class="tech-badge">OAuth 2.0</span>
-                    <span class="tech-badge">FastAPI</span>
-                    <span class="tech-badge">PostgreSQL</span>
+                    <span class="tech-badge">✔ security controls</span>
+                    <span class="tech-badge">✔ risk mitigation</span>
+                    <span class="tech-badge">✔ governance &amp; logging</span>
+                    <span class="tech-badge">✔ zero trust principles</span>
+                    <span class="tech-badge">✔ protecting against real threats</span>
                 </div>
                 <div style="margin-top: 10px; padding-left: 20px; color: var(--text-muted);">
-                    API Access &amp; Management Platform — <a href="https://github.com/varsha-ds/APIManagement">GitHub</a>
+                    API Access &amp; Management Platform — <a href="https://github.com/varsha-ds/APIManagement">[View Code]</a>
                 </div>
             </div>
 
@@ -1123,21 +1365,35 @@
                     <span class="code-keyword">class</span> <span class="code-function">TaxiDemandPipeline</span>:
                 </div>
                 <div class="code-line" style="padding-left: 20px;">
-                    <span class="code-comment"># Production-ready data pipeline for 3.4M+ records</span>
+                    <span class="code-string">"""</span>
                 </div>
                 <div class="code-line" style="padding-left: 20px;">
-                    pipeline = [<span class="code-string">"ingestion"</span>, <span class="code-string">"validation"</span>, <span class="code-string">"batch_processing"</span>, <span class="code-string">"persistence"</span>]
+                    <span class="code-comment">Trusted data processing pipeline for 3.4M+ NYC TLC records</span>
+                </div>
+                <!-- <div class="code-line" style="padding-left: 20px;">
+                    <span class="code-comment">with input validation, integrity checks, and safe forecasting.</span>
+                </div> -->
+                <div class="code-line" style="padding-left: 20px;">
+                    <span class="code-string">"""</span>
                 </div>
                 <div class="code-line" style="padding-left: 20px;">
-                    outcome = <span class="code-string">"optimized storage + repeatable analytics"</span>
+                    pipeline = [<span class="code-string">"ingestion"</span>, <span class="code-string">"sanitization"</span>, <span class="code-string">"validation"</span>, <span class="code-string">"batch_processing"</span>, <span class="code-string">"persistence"</span>, <span class="code-string">"predictions"</span>]
+                </div>
+                <div class="code-line" style="padding-left: 20px;">
+                    safeguards = [<span class="code-string">"schema verification"</span>, <span class="code-string">"duplicate detection"</span>, <span class="code-string">"boundary enforcement"</span>, <span class="code-string">"idempotent writes"</span>]
+                </div>
+                <div class="code-line" style="padding-left: 20px;">
+                    outcomes = [<span class="code-string">"clean &amp; trusted data"</span>, <span class="code-string">"repeatable analytics"</span>, <span class="code-string">"forecasting without data corruption"</span>]
                 </div>
                 <div style="margin-top: 15px; padding-left: 20px;">
-                    <span class="tech-badge">Python</span>
-                    <span class="tech-badge">Data Pipelines</span>
-                    <span class="tech-badge">Batch Processing</span>
+                    <span class="tech-badge">✔ trusted data</span>
+                    <span class="tech-badge">✔ integrity checks</span>
+                    <span class="tech-badge">✔ safe forecasting</span>
+                    <span class="tech-badge">✔ idempotent writes</span>
+                    <span class="tech-badge">✔ validation &amp; sanitization</span>
                 </div>
                 <div style="margin-top: 10px; padding-left: 20px; color: var(--text-muted);">
-                    NYC TLC Taxi Demand Forecasting System — <a href="https://github.com/varsha-ds/NYC-TLC-Taxi">GitHub</a>
+                    NYC TLC Taxi Demand Forecasting System — <a href="https://github.com/varsha-ds/NYC-TLC-Taxi">[View Code]</a>
                 </div>
             </div>
         </div>
