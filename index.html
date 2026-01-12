@@ -1328,6 +1328,35 @@
             <h2>// Featured Projects</h2>
 
             <div class="project-code-block" tabindex="0">
+                <div class="file-name">vt_ioc_enrichment.py</div>
+                <div class="code-line">
+                    <span class="code-keyword">class</span> <span class="code-function">IOCEnrichmentPipeline</span>:
+                </div>
+                <div class="code-line" style="padding-left: 20px;">
+                    <span class="code-comment"># Automated IOC enrichment with integrity checks against VT console data</span>
+                </div>
+                <div class="code-line" style="padding-left: 20px;">
+                    pipeline = [<span class="code-string">"ingest IOCs"</span>, <span class="code-string">"VT lookup"</span>, <span class="code-string">"normalize fields"</span>, <span class="code-string">"validate counts"</span>]
+                </div>
+                <div class="code-line" style="padding-left: 20px;">
+                    outputs = [<span class="code-string">"malicious"</span>, <span class="code-string">"suspicious"</span>, <span class="code-string">"harmless"</span>]
+                </div>
+                <div class="code-line" style="padding-left: 20px;">
+                    checks = [<span class="code-string">"field parity"</span>, <span class="code-string">"triage integrity"</span>, <span class="code-string">"raw console verification"</span>]
+                </div>
+                <div style="margin-top: 15px; padding-left: 20px;">
+                    <span class="tech-badge">✔ threat enrichment</span>
+                    <span class="tech-badge">✔ VT automation</span>
+                    <span class="tech-badge">✔ integrity checks</span>
+                    <span class="tech-badge">✔ triage acceleration</span>
+                    <span class="tech-badge">✔ data validation</span>
+                </div>
+                <div style="margin-top: 10px; padding-left: 20px; color: var(--text-muted);">
+                    Automated IOC Enrichment with VirusTotal — <a href="https://github.com/varsha-ds/virus_total_IOC">[View Code]</a>
+                </div>
+            </div>
+
+            <div class="project-code-block" tabindex="0">
                 <div class="file-name">api_management.py</div>
                 <div class="code-line">
                     <span class="code-keyword">class</span> <span class="code-function">APIAccessManager</span>:
